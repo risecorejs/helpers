@@ -1,0 +1,19 @@
+{
+  "name": "@risecorejs/helpers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risecorejs/helpers.git"
+  },
+  "author": "Amenov Abdulsalam <risecorejs@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/risecorejs/helpers/issues"
+  },
+  "homepage": "https://github.com/risecorejs/helpers#readme",
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
