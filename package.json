@@ -15,5 +15,8 @@
   "homepage": "https://github.com/risecorejs/helpers#readme",
   "devDependencies": {
     "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
