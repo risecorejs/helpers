@@ -1,12 +1,10 @@
-const fs = require('fs')
-const lodash = require('lodash')
-const path = require('path')
-
-const libPath = __dirname + '/lib'
-const lib = {}
-
-for (const file of fs.readdirSync(libPath)) {
-  lib[lodash.camelCase(path.parse(file).name)] = require(libPath + '/' + file)
+module.exports = {
+  connectToRabbitMQ: require('./lib/connect-to-rabbitmq'),
+  env: require('./lib/env'),
+  getIncludeAliasesByOrderPrefixes: require('./lib/get-include-aliases-by-order-prefixes'),
+  getModels: require('./lib/get-models'),
+  pluralize: require('./lib/pluralize'),
+  rediser: require('./lib/rediser'),
+  setGlobalStructs: require('./lib/set-global-structs'),
+  uploader: require('./lib/uploader')
 }
-
-module.exports = lib
