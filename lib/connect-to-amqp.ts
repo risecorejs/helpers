@@ -8,7 +8,10 @@ import env from './env'
  * @param options {amqplib.Options.Connect}
  * @returns {Promise<void>}
  */
-module.exports = async (callback: (channel: amqplib.Channel) => any, options?: amqplib.Options.Connect) => {
+export default async function (
+  callback: (channel: amqplib.Channel) => any,
+  options?: amqplib.Options.Connect
+): Promise<void> {
   const connection = await amqplib.connect(options || env('AMQP_URL', 'amqp://localhost'))
   const channel = await connection.createChannel()
 
