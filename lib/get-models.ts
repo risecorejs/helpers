@@ -12,19 +12,19 @@ import env from './env'
  * @return {IFieldsWithSequelize}
  */
 export default function (options: IOptions): IFieldsWithSequelize {
-  const config: SequelizeOptions = getConfig(options)
+  const config = getConfig(options)
 
-  const sequelize: Sequelize = new Sequelize(config)
+  const sequelize = new Sequelize(config)
 
   const db: IFieldsWithSequelize = {
     sequelize
   }
 
-  const modelsDir: string = path.resolve.apply(null, options.modelsDir)
+  const modelsDir = path.resolve.apply(null, options.modelsDir)
 
   for (const file of fs.readdirSync(modelsDir)) {
     if (file.endsWith('.js')) {
-      const modelPath: string = path.join(modelsDir, file)
+      const modelPath = path.join(modelsDir, file)
 
       const getModel: (sequelize: Sequelize) => any = require(modelPath)
 

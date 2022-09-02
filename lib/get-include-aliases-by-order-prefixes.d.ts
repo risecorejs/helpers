@@ -1,8 +1,7 @@
-import { IFields } from '../interfaces';
 /**
  * GET-INCLUDE-ALIASES-BY-ORDER-PREFIXES
- * @param queryOrder {[string, 'ASC' | 'DESC'] | undefined}
- * @param orderPrefixesWithIncludeAliases: {IFields}
+ * @param queryOrder {[string] | undefined}
+ * @param orderPrefixesWithIncludeAliases: {object}
  * @return {string[]}
  */
-export default function (queryOrder: [string, 'ASC' | 'DESC'] | undefined, orderPrefixesWithIncludeAliases: IFields): string[];
+export default function (queryOrder: [string] | undefined, orderPrefixesWithIncludeAliases: object): string[];
