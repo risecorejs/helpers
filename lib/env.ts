@@ -2,15 +2,13 @@
  * ENV
  * @param key {string}
  * @param defaultValue {any}
- * @returns {number|string|null}
+ * @return {number|string|null}
  */
 export default function (key: string, defaultValue: any): any {
-  if (process.env[key]) {
-    return typeof defaultValue === 'number' || defaultValue === Number
-      ? isNaN(+process.env[key])
-        ? process.env[key]
-        : +process.env[key]
-      : process.env[key]
+  const value = process.env[key]
+
+  if (value) {
+    return typeof defaultValue === 'number' || defaultValue === Number ? (isNaN(+value) ? value : +value) : value
   } else {
     return defaultValue ?? null
   }
