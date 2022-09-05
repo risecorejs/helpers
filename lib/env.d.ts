@@ -1,7 +1,7 @@
 /**
  * ENV
  * @param key {string}
- * @param defaultValue {any}
+ * @param defaultValue {any?}
  * @return {number|string|null}
  */
-export default function (key: string, defaultValue: any): any;
+export default function (key: string, defaultValue?: any): any;

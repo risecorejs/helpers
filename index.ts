@@ -6,12 +6,4 @@ import getRedisClient from './lib/get-redis-client'
 import pluralize from './lib/pluralize'
 import setGlobalStructs from './lib/set-global-structs'
 
-export default {
-  connectToAMQP,
-  env,
-  getIncludeAliasesByOrderPrefixes,
-  getModels,
-  getRedisClient,
-  pluralize,
-  setGlobalStructs
-}
+export { connectToAMQP, env, getIncludeAliasesByOrderPrefixes, getModels, getRedisClient, pluralize, setGlobalStructs }
