@@ -16,7 +16,7 @@ declare global {
 export default function (dir?: string): void {
   dir ||= path.resolve('structs')
 
-  global.$structs = {}
+  $structs = {}
 
   for (const file of fs.readdirSync(dir)) {
     const stat = fs.statSync(path.join(dir, file))
@@ -24,9 +24,9 @@ export default function (dir?: string): void {
     if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.json'))) {
       const key = _.camelCase(path.parse(file).name)
 
-      global.$structs[key] = require(path.join(dir, file))
+      $structs[key] = require(path.join(dir, file))
     }
   }
 
-  Object.freeze(global.$structs)
+  Object.freeze($structs)
 }
