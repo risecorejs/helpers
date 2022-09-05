@@ -16,7 +16,7 @@ declare global {
 export default function (dir?: string): void {
   dir ||= path.resolve('structs')
 
-  $structs = {}
+  global.$structs = {}
 
   for (const file of fs.readdirSync(dir)) {
     const stat = fs.statSync(path.join(dir, file))
