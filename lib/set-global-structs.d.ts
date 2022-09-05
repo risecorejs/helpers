@@ -1,3 +1,8 @@
+declare global {
+    var $structs: {
+        [key: string]: any;
+    };
+}
 /**
  * SET-GLOBAL-STRUCTS
  * @param dir {string?}

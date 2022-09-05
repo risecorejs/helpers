@@ -2,6 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import _ from 'lodash'
 
+declare global {
+  var $structs: {
+    [key: string]: any
+  }
+}
+
 /**
  * SET-GLOBAL-STRUCTS
  * @param dir {string?}
