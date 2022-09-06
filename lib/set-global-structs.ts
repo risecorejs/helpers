@@ -26,7 +26,7 @@ export default function (dir?: string): void {
 }
 
 declare global {
-  var $structs: {
+  export var $structs: {
     [key: string]: any
   }
 }
