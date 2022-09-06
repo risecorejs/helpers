@@ -4,10 +4,9 @@ import env from './env'
 
 /**
  * GET-REDIS-CLIENT
- * @param options
- * @return
+ * @param options {redis.RedisClientOptions}
  */
-export default async function (options: redis.RedisClientOptions) {
+export default async function (options?: redis.RedisClientOptions) {
   options ||= {
     socket: {
       host: env('REDIS_HOST', 'localhost'),

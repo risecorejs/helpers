@@ -1,10 +1,9 @@
 import redis from 'redis';
 /**
  * GET-REDIS-CLIENT
- * @param options
- * @return
+ * @param options {redis.RedisClientOptions}
  */
-export default function (options: redis.RedisClientOptions): Promise<import("@redis/client").RedisClientType<{
+export default function (options?: redis.RedisClientOptions): Promise<import("@redis/client").RedisClientType<{
     readonly graph: {
         CONFIG_GET: typeof import("@redis/graph/dist/commands/CONFIG_GET");
         configGet: typeof import("@redis/graph/dist/commands/CONFIG_GET");

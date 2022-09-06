@@ -5,7 +5,7 @@ import env from './env'
 /**
  * CONNECT-TO-AMQP
  * @param callback {(channel: amqplib.Channel) => any}
- * @param options {amqplib.Options.Connect}
+ * @param options {amqplib.Options.Connect?}
  * @return {Promise<void>}
  */
 export default async function (
