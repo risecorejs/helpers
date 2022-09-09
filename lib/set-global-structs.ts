@@ -5,9 +5,8 @@ import _ from 'lodash'
 /**
  * SET-GLOBAL-STRUCTS
  * @param dir {string?}
- * @return {void}
  */
-export default function (dir?: string): void {
+export default function (dir?: string) {
   dir ||= path.resolve('structs')
 
   global.$structs = {}
