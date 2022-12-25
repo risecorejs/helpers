@@ -1,4 +1,4 @@
-import redis from 'redis';
+import * as redis from 'redis';
 /**
  * GET-REDIS-CLIENT
  * @param options {redis.RedisClientOptions}

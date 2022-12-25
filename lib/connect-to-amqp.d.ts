@@ -4,4 +4,4 @@ import amqplib from 'amqplib';
  * @param callback {(channel: amqplib.Channel) => any}
  * @param options {amqplib.Options.Connect?}
  */
-export default function (callback: (channel: amqplib.Channel) => any, options?: amqplib.Options.Connect): Promise<void>;
+export default function (callback: (channel: amqplib.Channel, connection?: amqplib.Connection) => any, options?: amqplib.Options.Connect): Promise<void>;
